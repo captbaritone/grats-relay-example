@@ -1,7 +1,7 @@
 {
   "name": "grats-relay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Grats + Relay Example App",
   "main": "index.js",
   "scripts": {
     "grats": "grats",

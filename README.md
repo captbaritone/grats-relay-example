@@ -9,7 +9,9 @@ pnpm install
 pnpm run start
 ```
 
-This should open a browser window to `http://localhost:1234` where you can see the app running.
+The `start` script will run both the client and server in watch mode, including both Grats and Relay compilers.
+
+It should also open a browser window to `http://localhost:1234` where you can see the app running.
 
 To see the GraphiQL Playground, go to `http://localhost:4000/graphql` in your browser.
 
