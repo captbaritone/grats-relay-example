@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { useLazyLoadQuery } from "react-relay";
 import {
-  CacheConfig,
+  GraphQLResponse,
   RecordSource,
   RequestParameters,
   Store,
@@ -11,50 +11,47 @@ import {
 import { AppQuery } from "./__generated__/AppQuery.graphql";
 import { RelayEnvironmentProvider } from "react-relay";
 import { Environment, Network } from "relay-runtime";
+import { Suspense } from "react";
 
 function App() {
   const data = useLazyLoadQuery<AppQuery>(
     graphql`
       query AppQuery {
-        greeting(greeting: "Hoola")
-        second: greeting(greeting: "Wow")
+        greeting
       }
     `,
-    {}
+    {},
+    { fetchPolicy: "store-only" }
   );
-  return <div>{data.greeting}</div>;
+  return (
+    <div>
+      <h1>Welcome to Grats + Relay</h1>
+      Server says: <code>{data.greeting}</code>
+    </div>
+  );
 }
 
-const store = new Store(RecordSource.create());
-const network = Network.create(
-  async (
-    request: RequestParameters,
-    variables: Variables,
-    _cacheConfig: CacheConfig
-  ) => {
-    const response = await fetch("http://localhost:4000/graphql", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: request.text, variables: variables }),
-    });
-    return await response.json();
-  }
-);
+async function fetchGraphQL(
+  request: RequestParameters,
+  variables: Variables
+): Promise<GraphQLResponse> {
+  const response = await fetch("http://localhost:4000/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: request.text, variables: variables }),
+  });
+  return await response.json();
+}
 
 const environment = new Environment({
-  network,
-  store,
+  network: Network.create(fetchGraphQL),
+  store: new Store(RecordSource.create()),
 });
 
-function Wrapper() {
-  return (
-    <RelayEnvironmentProvider environment={environment}>
+createRoot(document.getElementById("app")!).render(
+  <RelayEnvironmentProvider environment={environment}>
+    <Suspense fallback={"Loading..."}>
       <App />
-    </RelayEnvironmentProvider>
-  );
-}
-
-const appNode = document.getElementById("app");
-
-const root = createRoot(appNode!);
-root.render(<Wrapper />);
+    </Suspense>
+  </RelayEnvironmentProvider>
+);

@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<edda2629a05586c96d20d7567a3c41fa>>
+ * @generated SignedSource<<2f25dae5aad388a3e3c306ac714486b5>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -12,7 +12,6 @@ import { ConcreteRequest, Query } from 'relay-runtime';
 export type AppQuery$variables = Record<PropertyKey, never>;
 export type AppQuery$data = {
   readonly greeting: string | null | undefined;
-  readonly second: string | null | undefined;
 };
 export type AppQuery = {
   response: AppQuery$data;
@@ -23,29 +22,10 @@ const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "alias": null,
-    "args": [
-      {
-        "kind": "Literal",
-        "name": "greeting",
-        "value": "Hoola"
-      }
-    ],
+    "args": null,
     "kind": "ScalarField",
     "name": "greeting",
-    "storageKey": "greeting(greeting:\"Hoola\")"
-  },
-  {
-    "alias": "second",
-    "args": [
-      {
-        "kind": "Literal",
-        "name": "greeting",
-        "value": "Wow"
-      }
-    ],
-    "kind": "ScalarField",
-    "name": "greeting",
-    "storageKey": "greeting(greeting:\"Wow\")"
+    "storageKey": null
   }
 ];
 return {
@@ -66,16 +46,16 @@ return {
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "e55609c4cc2584502a0c4531d38b63ab",
+    "cacheID": "78f017bacf613974bd3383b32b52fdba",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  greeting(greeting: \"Hoola\")\n  second: greeting(greeting: \"Wow\")\n}\n"
+    "text": "query AppQuery {\n  greeting\n}\n"
   }
 };
 })();
 
-(node as any).hash = "5a6a7ef797b5b977c6614c82fca604a1";
+(node as any).hash = "4269aa314c97ce22575594b23fc93615";
 
 export default node;
