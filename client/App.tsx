@@ -20,13 +20,12 @@ function App() {
         greeting
       }
     `,
-    {},
-    { fetchPolicy: "store-only" }
+    {}
   );
   return (
     <div>
       <h1>Welcome to Grats + Relay</h1>
-      Server says: <code>{data.greeting}</code>
+      Server says: "{data.greeting}"
     </div>
   );
 }
