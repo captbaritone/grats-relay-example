@@ -23,7 +23,7 @@ _Note:_ You may need to refresh the browser since the server may not be ready wh
   - [React](https://reactjs.org/) - UI Framework
   - [Relay](https://relay.dev/) - GraphQL Client
 - **Server**
-  - [Grats](httsp://grats.capt.dev) - GraphQL Schema
+  - [Grats](https://grats.capt.dev) - GraphQL Schema
   - [Yoga](https://the-guild.dev/graphql/yoga-server) - GraphQL Server
 - **Dev Setup**
   - [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
