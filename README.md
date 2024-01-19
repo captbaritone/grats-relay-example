@@ -30,3 +30,14 @@ _Note:_ You may need to refresh the browser since the server may not be ready wh
   - [Parcel](https://parceljs.org/) - Bundler for client code
   - [ts-node](https://typestrong.org/ts-node/) - Run TypeScript files directly
   - [concurrently](https://github.com/open-cli-tools/concurrently) - Run multiple watch commands concurrently
+
+## The Setup
+
+There are some things that we've done in this example to demonstrate Relay and Grats working well together.
+
+- A combined watch command which runs all relevant tools and processes in watch mode at the same time:
+  - Relay compiler
+  - Grats compiler
+  - Parcel bundler
+  - Node server
+- Added `extensions.json` and `settings.json` in `.vscode/` to enable the Relay VSCode extension configure it to use Grats's "locate" command for click-to-definition.
