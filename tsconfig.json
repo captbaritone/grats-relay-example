@@ -5,6 +5,7 @@
     "tsSchema": "./server/schema.ts"
   },
   "compilerOptions": {
+    "plugins": [{ "name": "grats-ts-plugin" }],
     "types": ["node"],
     "outDir": "dist",
     "module": "NodeNext",

@@ -1,3 +1,4 @@
 {
-  "relay.pathToLocateCommand": "./scripts/locate.sh"
+  "relay.pathToLocateCommand": "./scripts/locate.sh",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
