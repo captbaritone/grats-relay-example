@@ -29,6 +29,7 @@ _Note:_ You may need to refresh the browser since the server may not be ready wh
   - [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
   - [Parcel](https://parceljs.org/) - Bundler for client code
   - [ts-node](https://typestrong.org/ts-node/) - Run TypeScript files directly
+  - [Prettier](https://prettier.io/) - Auto-format code
   - [concurrently](https://github.com/open-cli-tools/concurrently) - Run multiple watch commands concurrently
 
 ## The Setup
@@ -41,3 +42,4 @@ There are some things that we've done in this example to demonstrate Relay and G
   - Parcel bundler
   - Node server
 - Added `extensions.json` and `settings.json` in `.vscode/` to enable the Relay VSCode extension configure it to use Grats's "locate" command for click-to-definition.
+- Ignored generated files in `.prettierignore`

@@ -6,6 +6,7 @@
   "scripts": {
     "grats": "grats",
     "relay": "relay-compiler",
+    "format": "prettier --write .",
     "parcel": "parcel ./client/index.html --open",
     "server": "node --watch --loader ts-node/esm server/server.ts",
     "start": "concurrently --prefix-colors yellow,blue,magenta,cyan -n server,client,relay,grats \"npm run server\" \"npm run parcel\" \"npm run relay -- --watch\" \"npm run grats -- --watch\""
@@ -25,6 +26,7 @@
     "grats": "^0.0.20",
     "grats-ts-plugin": "^0.0.2",
     "parcel": "^2.11.0",
+    "prettier": "^3.2.5",
     "process": "^0.11.10",
     "relay-compiler": "^16.1.0",
     "ts-node": "^10.9.2",

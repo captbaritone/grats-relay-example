@@ -20,7 +20,7 @@ function App() {
         greeting
       }
     `,
-    {}
+    {},
   );
   return (
     <div>
@@ -32,7 +32,7 @@ function App() {
 
 async function fetchGraphQL(
   request: RequestParameters,
-  variables: Variables
+  variables: Variables,
 ): Promise<GraphQLResponse> {
   const response = await fetch("http://localhost:4000/graphql", {
     method: "POST",
@@ -52,5 +52,5 @@ createRoot(document.getElementById("app")!).render(
     <Suspense fallback={"Loading..."}>
       <App />
     </Suspense>
-  </RelayEnvironmentProvider>
+  </RelayEnvironmentProvider>,
 );
