@@ -8,7 +8,7 @@
     "relay": "relay-compiler",
     "parcel": "parcel ./client/index.html --open",
     "server": "node --watch --loader ts-node/esm server/server.ts",
-    "start": "concurrently --prefix-colors yellow,blue,magenta,cyan -n server,client,relay,grats \"npm run server\" \"npm run parcel\" \"npm run relay --watch\" \"npm run grats --watch\""
+    "start": "concurrently --prefix-colors yellow,blue,magenta,cyan -n server,client,relay,grats \"npm run server\" \"npm run parcel\" \"npm run relay -- --watch\" \"npm run grats -- --watch\""
   },
   "keywords": [],
   "author": "",
