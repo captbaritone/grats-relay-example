@@ -2,13 +2,13 @@
   "name": "grats-relay",
   "version": "1.0.0",
   "description": "Grats + Relay Example App",
-  "main": "index.js",
   "scripts": {
     "grats": "grats",
     "relay": "relay-compiler",
     "format": "prettier --write .",
     "parcel": "parcel ./client/index.html --open",
     "server": "node --watch --loader ts-node/esm server/server.ts",
+    "build": "grats && relay-compiler && tsc && parcel build ./client/index.html",
     "start": "concurrently --prefix-colors yellow,blue,magenta,cyan -n server,client,relay,grats \"npm run server\" \"npm run parcel\" \"npm run relay -- --watch\" \"npm run grats -- --watch\""
   },
   "keywords": [],
