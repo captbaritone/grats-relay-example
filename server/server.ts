@@ -10,6 +10,11 @@ export function greeting(_: Query): string {
   return `Hello world!`;
 }
 
+/** @gqlField */
+export function alwaysThrows(_: Query): string {
+  throw new Error("I always throw!");
+}
+
 const yoga = createYoga({
   schema: getSchema(),
 });

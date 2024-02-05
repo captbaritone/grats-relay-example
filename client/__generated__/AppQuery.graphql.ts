@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<2f25dae5aad388a3e3c306ac714486b5>>
+ * @generated SignedSource<<92fb1565476a26235c3075361f0770b9>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -9,9 +9,11 @@
 // @ts-nocheck
 
 import { ConcreteRequest, Query } from 'relay-runtime';
+import { FragmentRefs } from "relay-runtime";
 export type AppQuery$variables = Record<PropertyKey, never>;
 export type AppQuery$data = {
-  readonly greeting: string | null | undefined;
+  readonly greeting: string;
+  readonly " $fragmentSpreads": FragmentRefs<"AppChildComponent">;
 };
 export type AppQuery = {
   response: AppQuery$data;
@@ -19,22 +21,27 @@ export type AppQuery = {
 };
 
 const node: ConcreteRequest = (function(){
-var v0 = [
-  {
-    "alias": null,
-    "args": null,
-    "kind": "ScalarField",
-    "name": "greeting",
-    "storageKey": null
-  }
-];
+var v0 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "greeting",
+  "storageKey": null
+};
 return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
     "name": "AppQuery",
-    "selections": (v0/*: any*/),
+    "selections": [
+      (v0/*: any*/),
+      {
+        "args": null,
+        "kind": "FragmentSpread",
+        "name": "AppChildComponent"
+      }
+    ],
     "type": "Query",
     "abstractKey": null
   },
@@ -43,19 +50,28 @@ return {
     "argumentDefinitions": [],
     "kind": "Operation",
     "name": "AppQuery",
-    "selections": (v0/*: any*/)
+    "selections": [
+      (v0/*: any*/),
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "alwaysThrows",
+        "storageKey": null
+      }
+    ]
   },
   "params": {
-    "cacheID": "78f017bacf613974bd3383b32b52fdba",
+    "cacheID": "cef14ef62f51982e1cc6cd9125825124",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  greeting\n}\n"
+    "text": "query AppQuery {\n  greeting\n  ...AppChildComponent\n}\n\nfragment AppChildComponent on Query {\n  alwaysThrows\n}\n"
   }
 };
 })();
 
-(node as any).hash = "4269aa314c97ce22575594b23fc93615";
+(node as any).hash = "8c604be92d2a9df11b8438450a317a66";
 
 export default node;

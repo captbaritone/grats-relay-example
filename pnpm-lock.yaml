@@ -13,12 +13,15 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-error-boundary:
+    specifier: ^4.0.12
+    version: 4.0.12(react@18.2.0)
   react-relay:
-    specifier: ^16.1.0
-    version: 16.1.0(react@18.2.0)
+    specifier: 0.0.0-main-cebc7f06
+    version: 0.0.0-main-cebc7f06(react@18.2.0)
   relay-runtime:
-    specifier: ^16.1.0
-    version: 16.1.0
+    specifier: 0.0.0-main-cebc7f06
+    version: 0.0.0-main-cebc7f06
 
 devDependencies:
   '@babel/core':
@@ -54,12 +57,15 @@ devDependencies:
   parcel:
     specifier: ^2.11.0
     version: 2.11.0(typescript@5.3.3)
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
   process:
     specifier: ^0.11.10
     version: 0.11.10
   relay-compiler:
-    specifier: ^16.1.0
-    version: 16.1.0
+    specifier: 0.0.0-main-cebc7f06
+    version: 0.0.0-main-cebc7f06
   ts-node:
     specifier: ^10.9.2
     version: 10.9.2(@types/node@20.11.0)(typescript@5.3.3)
@@ -2646,6 +2652,12 @@ packages:
       posthtml-render: 3.0.0
     dev: true
 
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
     engines: {node: '>= 0.6.0'}
@@ -2667,6 +2679,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-error-boundary@4.0.12(react@18.2.0):
+    resolution: {integrity: sha512-kJdxdEYlb7CPC1A0SeUY38cHpjuu6UkvzKiAmqmOFL21VRfMhOcWxTCBgLVCO0VEMh9JhFNcVaXlV4/BTpiwOA==}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.23.8
+      react: 18.2.0
+    dev: false
+
   /react-error-overlay@6.0.9:
     resolution: {integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==}
     dev: true
@@ -2676,8 +2697,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-relay@16.1.0(react@18.2.0):
-    resolution: {integrity: sha512-qwm5PC+Vwy+qzs+Ob/PKs3YAWZOK2jm87GaMa44pHGR62ENS6xpFGXsANKAvFas1CUJ75yaexuGRO6z7RPnk8w==}
+  /react-relay@0.0.0-main-cebc7f06(react@18.2.0):
+    resolution: {integrity: sha512-XTYf6UnT73GjSBWAa+dbFT85xeud5Kfl5x3o46G64E6HQxm+Srfhomf0bTbWdyp+1xc8RqqbJL1Q6yzjmFj6yw==}
     peerDependencies:
       react: ^16.9.0 || ^17 || ^18
     dependencies:
@@ -2686,7 +2707,7 @@ packages:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 18.2.0
-      relay-runtime: 16.1.0
+      relay-runtime: 0.0.0-main-cebc7f06
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -2705,13 +2726,13 @@ packages:
   /regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
 
-  /relay-compiler@16.1.0:
-    resolution: {integrity: sha512-ZceB9u0Zx5/6VJwRViaGwZEUsEY/wqdbxPs7AD2/udZYabRae5az97MU9XZ3p4zIeZhR+y9y2+KLdXuoECeLvA==}
+  /relay-compiler@0.0.0-main-cebc7f06:
+    resolution: {integrity: sha512-86CtXl/Etwasq9XoIlTzF7AjSbld+tRF/LSGcOFmOmuPOwDMEfQHRPUwbGpW4pYHzQj8VvLYt2S+OP5siY1MSA==}
     hasBin: true
     dev: true
 
-  /relay-runtime@16.1.0:
-    resolution: {integrity: sha512-SM5MP4ETxTtYrXya5ceAEF3XuVzlku48+YyaxZkTnXG/FUvE2QfIxkZ5P2Q/j33Eo9tfrcl4UfZoSkx6IbQ37Q==}
+  /relay-runtime@0.0.0-main-cebc7f06:
+    resolution: {integrity: sha512-/K0snyjPfmmmyUdW60+nO8fALL7Qzl0rcgPaOv5RqGjP2WhmSC743X3EG6A1oU1khKpGjvHo8edkJq84PNUk4A==}
     dependencies:
       '@babel/runtime': 7.23.8
       fbjs: 3.0.5
