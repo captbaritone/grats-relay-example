@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   graphql:
     specifier: ^16.8.1
@@ -49,11 +53,11 @@ devDependencies:
     specifier: ^8.2.2
     version: 8.2.2
   grats:
-    specifier: ^0.0.20
-    version: 0.0.20
+    specifier: ^0.0.24
+    version: 0.0.24
   grats-ts-plugin:
     specifier: ^0.0.2
-    version: 0.0.2(grats@0.0.20)
+    version: 0.0.2(grats@0.0.24)
   parcel:
     specifier: ^2.11.0
     version: 2.11.0(typescript@5.3.3)
@@ -2113,16 +2117,16 @@ packages:
     resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
-  /grats-ts-plugin@0.0.2(grats@0.0.20):
+  /grats-ts-plugin@0.0.2(grats@0.0.24):
     resolution: {integrity: sha512-oRgEBDaMdYlPvvFycTeGqWPoqNfYgwtRU/em6GczMi/gKc2+rK9ScJy4zm2/XeTMgyus2YofsSh8grsa0Po+Cw==}
     peerDependencies:
       grats: '>=0.0.19'
     dependencies:
-      grats: 0.0.20
+      grats: 0.0.24
     dev: true
 
-  /grats@0.0.20:
-    resolution: {integrity: sha512-NyVXNjDRcgCdqtN7HGe3Ul3/qWB7Q3/hpe+BR3B27UJjJvYNH793YdTHavt1VPentTtQaV6kJpi+P6Y7s4J+gA==}
+  /grats@0.0.24:
+    resolution: {integrity: sha512-K3WdAOet4x9YdVokTwTZ0hCf3mZmiuqvduLPwTO3DVT6IBmhjLeGicv0rAi1LGyLWTcBPGlTRDzu/TfpdyI0kw==}
     engines: {node: '>=16 <=21', pnpm: ^8}
     hasBin: true
     dependencies:
@@ -2510,6 +2514,7 @@ packages:
   /node-gyp-build-optional-packages@5.0.7:
     resolution: {integrity: sha512-YlCCc6Wffkx0kHkmam79GKvDQ6x+QZkMjFGrIMxgFNILFvGSbCp2fCBC55pGTT9gVaz8Na5CLmxt/urtzRv36w==}
     hasBin: true
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -2546,9 +2551,6 @@ packages:
     resolution: {integrity: sha512-H/RI1/DmuOkL8RuG/EpNPvtzrbF+7jA/R56ydEEm+lqFbYktKB4COR7JXdHkZXRgbSJyimrFB8d0r9+SaRnj0Q==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
-    peerDependenciesMeta:
-      '@parcel/core':
-        optional: true
     dependencies:
       '@parcel/config-default': 2.11.0(@parcel/core@2.11.0)(typescript@5.3.3)
       '@parcel/core': 2.11.0

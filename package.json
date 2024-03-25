@@ -23,7 +23,7 @@
     "@types/relay-runtime": "^14.1.22",
     "babel-plugin-relay": "^16.1.0",
     "concurrently": "^8.2.2",
-    "grats": "^0.0.20",
+    "grats": "^0.0.24",
     "grats-ts-plugin": "^0.0.2",
     "parcel": "^2.11.0",
     "prettier": "^3.2.5",
