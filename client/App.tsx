@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <h1>Welcome to Grats + Relay</h1>
-      Server says: "{data.greeting}"
+      Server says: {data.greeting}
     </div>
   );
 }
