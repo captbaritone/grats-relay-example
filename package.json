@@ -4,6 +4,7 @@
   "description": "Grats + Relay Example App",
   "type": "module",
   "scripts": {
+    "lint": "eslint .",
     "grats": "grats",
     "relay": "relay-compiler",
     "format": "prettier --write .",
@@ -17,6 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.0",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.4.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
@@ -25,13 +28,18 @@
     "babel-plugin-relay": "^16.1.0",
     "concurrently": "^8.2.2",
     "grats": "^0.0.32",
+    "eslint": "9.x",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-relay": "^1.8.3",
+    "globals": "^15.4.0",
     "grats-ts-plugin": "^0.0.2",
     "parcel": "^2.11.0",
     "prettier": "^3.2.5",
     "process": "^0.11.10",
     "relay-compiler": "^18.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.13.0"
   },
   "dependencies": {
     "graphql": "^16.8.1",

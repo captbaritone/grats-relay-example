@@ -31,6 +31,8 @@ _Note:_ You may need to refresh the browser since the server may not be ready wh
   - [ts-node](https://typestrong.org/ts-node/) - Run TypeScript files directly
   - [Prettier](https://prettier.io/) - Auto-format code
   - [concurrently](https://github.com/open-cli-tools/concurrently) - Run multiple watch commands concurrently
+  - [eslint](https://eslint.org/) - Linting for JavaScript files
+  - [eslint-plugin-relay](https://github.com/relayjs/eslint-plugin-relay) - Lint rules for Relay
 
 ## The Setup
 
