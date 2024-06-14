@@ -37,7 +37,11 @@ async function fetchGraphQL(
   const response = await fetch("http://localhost:4000/graphql", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query: request.text, variables: variables }),
+    body: JSON.stringify({
+      variables: variables,
+      // This is the persisted query format expected by Yoga
+      extensions: { persistedQuery: { version: 1, sha256Hash: request.id } },
+    }),
   });
   return await response.json();
 }

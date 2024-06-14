@@ -1,4 +1,8 @@
 {
   "language": "typescript",
-  "schema": "./server/schema.graphql"
+  "schema": "./server/schema.graphql",
+  "persistConfig": {
+    "file": "./server/persistedQueries.json",
+    "algorithm": "SHA256"
+  }
 }

@@ -1,5 +1,6 @@
 /**
- * @generated SignedSource<<41671812a6d638eabd9b02529bade49f>>
+ * @generated SignedSource<<21fa4d158a6de64fa108e08aaa70132f>>
+ * @relayHash 78f017bacf613974bd3383b32b52fdba
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -8,10 +9,10 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from 'relay-runtime';
-export type AppQuery$variables = {
-  name: string;
-};
+// @relayRequestID 8845b059c61e3414885f8749ce0134d1d3368df5b573079014f030e49c6cde57
+
+import { ConcreteRequest, Query } from 'relay-runtime';
+export type AppQuery$variables = Record<PropertyKey, never>;
 export type AppQuery$data = {
   readonly greeting: string;
 };
@@ -63,12 +64,11 @@ return {
     "selections": (v1/*: any*/)
   },
   "params": {
-    "cacheID": "f0137a4e4512305a71fafa84462f4613",
-    "id": null,
+    "id": "8845b059c61e3414885f8749ce0134d1d3368df5b573079014f030e49c6cde57",
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery(\n  $name: String!\n) {\n  greeting(name: $name)\n}\n"
+    "text": null
   }
 };
 })();
