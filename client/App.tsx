@@ -18,7 +18,7 @@ import { ErrorBoundary } from "react-error-boundary";
 function App() {
   const data = useLazyLoadQuery<AppQuery>(
     graphql`
-      query AppQuery {
+      query AppQuery @throwOnFieldError {
         greeting
         ...AppChildComponent
       }
@@ -47,7 +47,7 @@ function Fallback() {
 function ChildComponent(props: { query: AppChildComponent$key }) {
   const data = useFragment(
     graphql`
-      fragment AppChildComponent on Query {
+      fragment AppChildComponent on Query @throwOnFieldError {
         # When this errors, the component will throw and
         # the error will be caught by the ErrorBoundary
         alwaysThrows
@@ -61,8 +61,6 @@ function ChildComponent(props: { query: AppChildComponent$key }) {
 
 // @ts-ignore DefinitelyTyped is missing this
 RelayFeatureFlags.ENABLE_FIELD_ERROR_HANDLING = true;
-// @ts-ignore DefinitelyTyped is missing this
-RelayFeatureFlags.ENABLE_FIELD_ERROR_HANDLING_THROW_BY_DEFAULT = true;
 
 async function fetchGraphQL(
   request: RequestParameters,

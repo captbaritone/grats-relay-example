@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<12217866d089058084e18eff51080cd1>>
+ * @generated SignedSource<<02cae74deb98f3bc1f249aded2133549>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -22,7 +22,9 @@ export type AppChildComponent$key = {
 const node: ReaderFragment = {
   "argumentDefinitions": [],
   "kind": "Fragment",
-  "metadata": null,
+  "metadata": {
+    "throwOnFieldError": true
+  },
   "name": "AppChildComponent",
   "selections": [
     {
@@ -37,6 +39,6 @@ const node: ReaderFragment = {
   "abstractKey": null
 };
 
-(node as any).hash = "3a2ff88d77eda47848f68edf907a105b";
+(node as any).hash = "8ebdd753878365977c5739a8df1c434a";
 
 export default node;

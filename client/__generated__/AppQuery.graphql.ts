@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<92fb1565476a26235c3075361f0770b9>>
+ * @generated SignedSource<<93944f03eea1c55a7246fc70920b8db2>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -32,7 +32,9 @@ return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
-    "metadata": null,
+    "metadata": {
+      "throwOnFieldError": true
+    },
     "name": "AppQuery",
     "selections": [
       (v0/*: any*/),
@@ -72,6 +74,6 @@ return {
 };
 })();
 
-(node as any).hash = "8c604be92d2a9df11b8438450a317a66";
+(node as any).hash = "3bdff508424f47c80c1bd6d267c74c40";
 
 export default node;
