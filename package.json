@@ -7,7 +7,7 @@
     "relay": "relay-compiler",
     "format": "prettier --write .",
     "parcel": "parcel ./client/index.html --open",
-    "server": "node --watch --loader ts-node/esm server/server.ts",
+    "server": "ts-node server/server.ts",
     "build": "grats && relay-compiler && tsc && parcel build ./client/index.html",
     "start": "concurrently --prefix-colors yellow,blue,magenta,cyan -n server,client,relay,grats \"npm run server\" \"npm run parcel\" \"npm run relay -- --watch\" \"npm run grats -- --watch\""
   },
@@ -23,12 +23,12 @@
     "@types/relay-runtime": "^14.1.22",
     "babel-plugin-relay": "^16.1.0",
     "concurrently": "^8.2.2",
-    "grats": "^0.0.20",
+    "grats": "0.0.0-main-bc5527cb",
     "grats-ts-plugin": "^0.0.2",
     "parcel": "^2.11.0",
     "prettier": "^3.2.5",
     "process": "^0.11.10",
-    "relay-compiler": "^16.1.0",
+    "relay-compiler": "0.0.0-main-43bd9bed",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
@@ -37,8 +37,9 @@
     "graphql-yoga": "^5.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-relay": "^16.1.0",
-    "relay-runtime": "^16.1.0"
+    "react-error-boundary": "^4.0.12",
+    "react-relay": "0.0.0-main-43bd9bed",
+    "relay-runtime": "0.0.0-main-43bd9bed"
   },
   "prettier": {}
 }
