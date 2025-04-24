@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<2f25dae5aad388a3e3c306ac714486b5>>
+ * @generated SignedSource<<41671812a6d638eabd9b02529bade49f>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -8,10 +8,12 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest, Query } from 'relay-runtime';
-export type AppQuery$variables = Record<PropertyKey, never>;
+import { ConcreteRequest } from 'relay-runtime';
+export type AppQuery$variables = {
+  name: string;
+};
 export type AppQuery$data = {
-  readonly greeting: string | null | undefined;
+  readonly greeting: string;
 };
 export type AppQuery = {
   response: AppQuery$data;
@@ -21,8 +23,21 @@ export type AppQuery = {
 const node: ConcreteRequest = (function(){
 var v0 = [
   {
+    "defaultValue": null,
+    "kind": "LocalArgument",
+    "name": "name"
+  }
+],
+v1 = [
+  {
     "alias": null,
-    "args": null,
+    "args": [
+      {
+        "kind": "Variable",
+        "name": "name",
+        "variableName": "name"
+      }
+    ],
     "kind": "ScalarField",
     "name": "greeting",
     "storageKey": null
@@ -30,32 +45,34 @@ var v0 = [
 ];
 return {
   "fragment": {
-    "argumentDefinitions": [],
+    "argumentDefinitions": (v0/*: any*/),
     "kind": "Fragment",
-    "metadata": null,
+    "metadata": {
+      "throwOnFieldError": true
+    },
     "name": "AppQuery",
-    "selections": (v0/*: any*/),
+    "selections": (v1/*: any*/),
     "type": "Query",
     "abstractKey": null
   },
   "kind": "Request",
   "operation": {
-    "argumentDefinitions": [],
+    "argumentDefinitions": (v0/*: any*/),
     "kind": "Operation",
     "name": "AppQuery",
-    "selections": (v0/*: any*/)
+    "selections": (v1/*: any*/)
   },
   "params": {
-    "cacheID": "78f017bacf613974bd3383b32b52fdba",
+    "cacheID": "f0137a4e4512305a71fafa84462f4613",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  greeting\n}\n"
+    "text": "query AppQuery(\n  $name: String!\n) {\n  greeting(name: $name)\n}\n"
   }
 };
 })();
 
-(node as any).hash = "4269aa314c97ce22575594b23fc93615";
+(node as any).hash = "39924da7cc5995476b07dd47787bc100";
 
 export default node;

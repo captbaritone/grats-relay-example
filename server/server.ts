@@ -1,13 +1,10 @@
 import { createServer } from "node:http";
 import { createYoga } from "graphql-yoga";
-import { getSchema } from "./schema";
+import { getSchema } from "./schema.js";
 
-/** @gqlType */
-type Query = unknown;
-
-/** @gqlField */
-export function greeting(_: Query): string {
-  return `Hello world!`;
+/** @gqlQueryField */
+export function greeting(name: string = "World"): string {
+  return `Hello ${name}!`;
 }
 
 const yoga = createYoga({

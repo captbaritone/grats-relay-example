@@ -8,7 +8,7 @@ import {
   Variables,
   graphql,
 } from "relay-runtime";
-import { AppQuery } from "./__generated__/AppQuery.graphql";
+import { AppQuery } from "./__generated__/AppQuery.graphql.js";
 import { RelayEnvironmentProvider } from "react-relay";
 import { Environment, Network } from "relay-runtime";
 import { Suspense } from "react";
@@ -16,11 +16,11 @@ import { Suspense } from "react";
 function App() {
   const data = useLazyLoadQuery<AppQuery>(
     graphql`
-      query AppQuery {
-        greeting
+      query AppQuery($name: String!) @throwOnFieldError {
+        greeting(name: $name)
       }
     `,
-    {},
+    {name: "Grats and Relay"},
   );
   return (
     <div>
