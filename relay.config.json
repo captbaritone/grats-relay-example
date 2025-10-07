@@ -1,6 +1,7 @@
 {
   "language": "typescript",
   "schema": "./server/schema.graphql",
+  "eagerEsModules": true,
   "persistConfig": {
     "file": "./server/persistedQueries.json",
     "algorithm": "SHA256"
