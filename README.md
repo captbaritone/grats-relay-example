@@ -27,8 +27,8 @@ _Note:_ You may need to refresh the browser since the server may not be ready wh
   - [Yoga](https://the-guild.dev/graphql/yoga-server) - GraphQL Server
 - **Dev Setup**
   - [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
-  - [Parcel](https://parceljs.org/) - Bundler for client code
-  - [ts-node](https://typestrong.org/ts-node/) - Run TypeScript files directly
+  - [Vite](https://vite.dev/) - Bundler for client code
+  - [tsx](https://tsx.is/) - Run TypeScript files directly
   - [Prettier](https://prettier.io/) - Auto-format code
   - [concurrently](https://github.com/open-cli-tools/concurrently) - Run multiple watch commands concurrently
   - [eslint](https://eslint.org/) - Linting for JavaScript files
@@ -41,7 +41,7 @@ There are some things that we've done in this example to demonstrate Relay and G
 - A combined watch command which runs all relevant tools and processes in watch mode at the same time:
   - Relay compiler
   - Grats compiler
-  - Parcel bundler
+  - Vite bundler
   - Node server
 - Added `extensions.json` and `settings.json` in `.vscode/` to enable the Relay VSCode extension configure it to use Grats's "locate" command for click-to-definition.
 - Ignored generated files in `.prettierignore`
