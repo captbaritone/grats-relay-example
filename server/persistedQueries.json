@@ -1,4 +1,5 @@
 {
+  "36fa8f6ff3f30df566f787abab3ce62c5c29b0fb34d5a6727a494398627c1b64": "query AppQuery(\n  $name: String!\n) {\n  greeting(name: $name)\n}\n",
   "759c5233037a0675a8c6d9bd4cbfb7ac634d2a542754a7308416c5deddb72968": "query AppOneQuery {\n  greeting\n}\n",
   "8845b059c61e3414885f8749ce0134d1d3368df5b573079014f030e49c6cde57": "query AppQuery {\n  greeting\n}\n"
 }
