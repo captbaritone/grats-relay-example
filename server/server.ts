@@ -4,6 +4,9 @@ import { getSchema } from "./schema.js";
 import { usePersistedOperations } from "@graphql-yoga/plugin-persisted-operations";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @gqlQueryField */
 export function greeting(name: string = "World"): string {
@@ -23,7 +26,11 @@ function getPersistedOperation(sha256Hash: string) {
     "utf8",
   );
   const store = JSON.parse(queriesJson);
-  return store[sha256Hash];
+  const persistedQuery = store[sha256Hash];
+  if (persistedQuery == null) {
+    throw new Error(`Persisted query not found for hash: ${sha256Hash}`);
+  }
+  return persistedQuery;
 }
 
 const server = createServer(yoga);

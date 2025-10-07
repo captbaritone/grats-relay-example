@@ -20,7 +20,7 @@ function App() {
         greeting(name: $name)
       }
     `,
-    {name: "Grats and Relay"},
+    { name: "Grats and Relay" },
   );
   return (
     <div>
@@ -49,6 +49,9 @@ async function fetchGraphQL(
 const environment = new Environment({
   network: Network.create(fetchGraphQL),
   store: new Store(RecordSource.create()),
+  relayFieldLogger(event) {
+    console.log("Relay Field:", event);
+  },
 });
 
 createRoot(document.getElementById("app")!).render(
